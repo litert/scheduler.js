@@ -1,0 +1,39 @@
+{
+  "name": "@litert/scheduler",
+  "version": "0.1.0",
+  "description": "A simple Scheduler based on LiteRT framework.",
+  "main": "libs/index.js",
+  "dependencies": {
+    "@litert/core": "^1.0.3",
+    "@litert/reflect": "^0.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.14",
+    "typescript": "^3.2.2",
+    "tslint": "^5.12.0"
+  },
+  "scripts": {
+    "prepare": "npm run rebuild",
+    "build": "echo Using TypeScript && tsc -v && tsc -p .",
+    "build-watch": "echo Using TypeScript && tsc -v && tsc -w -p .",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "test": "echo See directory sources/samples",
+    "clean": "rm -rf sample libs",
+    "lint": "tslint -p . -c tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litert/scheduler.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litert/scheduler.js/issues"
+  },
+  "homepage": "https://github.com/litert/scheduler.js#readme",
+  "keywords": [
+    "scheduler"
+  ],
+  "author": "xrb <happyxrb@gmail.com>",
+  "license": "Apache-2.0",
+  "types": "libs/index.d.ts",
+  "typings": "libs/index.d.ts"
+}
