@@ -48,6 +48,7 @@ export abstract class AbstractTask extends EventEmitter implements ITaskRun {
     public async start() {
 
         if (this.state !== ETaskState.IDLE) {
+
             return;
         }
 

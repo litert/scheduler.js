@@ -174,7 +174,8 @@ export class ExactTask extends I.AbstractTask {
         this._counter--;
 
         if (this._counter === 0 &&
-            this.state === I.ETaskState.STOPPING) {
+            this.state === I.ETaskState.STOPPING
+        ) {
 
             this.state = I.ETaskState.IDLE;
 

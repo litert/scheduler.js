@@ -90,6 +90,7 @@ export function getSameOfNeighboringTimeStamp(
         case ETaskUnit.YEAR:
 
         interval = interval * 12;
+
         break;
 
         case ETaskUnit.MONTH:

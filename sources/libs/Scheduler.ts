@@ -40,7 +40,7 @@ implements Abstract.IScheduler {
 
         if (!task) {
 
-            throw new E.E_INVALID_TIME_UNIT();
+            throw new E.E_TASK_NOT_FOUND();
         }
 
         return task.start();
@@ -155,6 +155,7 @@ implements Abstract.IScheduler {
     public recover(tasks: Record<string, Abstract.ITaskOptions>) {
 
         let now = Date.now();
+
         for (let id in tasks) {
             // 如果加载的配置有不存在的计划任务,则跳过
             if (this._tasks[id]) {

@@ -16,7 +16,6 @@
 
 import * as L from "@litert/core";
 export const ErrorHub = L.createErrorHub("@litert/scheduler");
-
 export const E_INVALID_TIME_UNIT = ErrorHub.define(
     null,
     "E_INVALID_TIME_UNIT",
