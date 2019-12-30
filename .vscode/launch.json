@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "scheduler test",
-            "program": "${workspaceRoot}/sources/sample/start.ts",
+            "program": "${workspaceRoot}/sources/sample/sample-createExact.ts",
             "cwd": "${workspaceFolder}",
 	        "args": [
                
@@ -20,6 +20,5 @@
             ],
             "sourceMaps": true
         },
-       
     ]
 }

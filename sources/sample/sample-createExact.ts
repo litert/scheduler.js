@@ -29,10 +29,10 @@ async function execute( ) {
     Sche.add({
         "id": "123",
         "name": "sdf",
-        "unit": ETaskUnit.SECOND,
+        "unit": ETaskUnit.MONTH,
         "interval": 1,
         "execute": execute,
-        "nextTime": 0
+        "nextTime": new Date("2016-02-29T15:35:23").getTime()
     });
 
     Sche.start();

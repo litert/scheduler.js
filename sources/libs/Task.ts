@@ -98,7 +98,27 @@ export class ExactTask extends I.AbstractTask {
 
     }
 
+    /**
+     * if nextTime < now
+     * then adjust real nextTime by nextTime
+     */
+    private _adjustNextTime() {
+
+        const now = Date.now();
+
+        while (this.task.nextTime < now) {
+
+            this.task.nextTime = getSameOfNeighboringTimeStamp(
+                this.task.nextTime,
+                this.task.unit || Abstract.ETaskUnit.MINUTE,
+                this.task.interval || 1,
+            ).getTime();
+        }
+    }
+
     public async run(): Promise<void> {
+
+        this._adjustNextTime();
 
         return new Promise(async (resolve) => {
 

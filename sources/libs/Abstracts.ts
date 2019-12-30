@@ -49,29 +49,37 @@ export interface ITaskOptions  {
 
     /**
      * ID
+     * 唯一标识，不可重复
      */
     "id": string;
+
     /**
-     * 名称
+     * 显示名称
      */
     "name": string;
 
     /**
-     * 精确执行(定时执行)false 或者间隔执行 true, 默认false
+     * 精确执行(定时执行)false,定期在固定时间执行,即每次开始执行时间的间隔一样
+     * 间隔执行 true,不在固定时间定期执行,每次开始时间减去上次结束时间为间隔时间
+     * 默认精确执行 false
      */
     "isInExact" ?: boolean;
+
     /**
      * 默认按分钟执行
      */
     "unit" ?: ETaskUnit;
+
     /**
      * 默认为1
      */
     "interval" ?: number;
+
     /**
      * 不写该字段就是立即执行
      */
     "notBefore" ?: number;
+
     /**
      * 停止时间戳,不再执行
      */
@@ -81,6 +89,7 @@ export interface ITaskOptions  {
      * 参数
      */
     args ?: any;
+
     /**
      * 执行的函数
      */
